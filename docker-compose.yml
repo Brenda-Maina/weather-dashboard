@@ -1,0 +1,23 @@
+services:
+  web-01:
+    image: nginx
+    networks:
+      - webnet
+
+  web-02:
+    image: nginx
+    networks:
+      - webnet
+
+  lb-01:
+    image: haproxy:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    networks:
+      - webnet
+
+networks:
+  webnet:
+

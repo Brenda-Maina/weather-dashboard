@@ -1,0 +1,91 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select,
+button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #00b4d8;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #0077b6;
+}
+
+#weatherDisplay {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  background: #caf0f8;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 80px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #90e0ef;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  text-align: left;
+  min-width: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-content input,
+.dropdown-content select {
+  width: 90%;
+  margin: 5px 0;
+}
+
+.dropdown-content ul {
+  padding-left: 20px;
+  margin: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.show {
+  display: block;
+}
+

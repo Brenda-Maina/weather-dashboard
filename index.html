@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard Pro ☀️🌧️</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather Dashboard Pro ☀️🌧️</h1>
+
+      <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">⚙️ Options</button>
+        <div id="dropdown-content" class="dropdown-content">
+          <label for="unitSelect">📏 Select Unit:</label>
+          <select id="unitSelect">
+            <option value="metric">Celsius (°C)</option>
+            <option value="imperial">Fahrenheit (°F)</option>
+          </select>
+          <br />
+          <input type="checkbox" id="showTemp" checked /> 🌡️ Show Temperature<br />
+          <input type="checkbox" id="showHumidity" checked /> 💧 Show Humidity<br />
+          <input type="checkbox" id="showWind" checked /> 🌬️ Show Wind Speed<br />
+          <hr />
+          <h4>🕓 Recent Searches</h4>
+          <ul id="recent-searches"></ul>
+        </div>
+      </div>
+
+      <input type="text" id="cityInput" placeholder="Enter city..." />
+      <button onclick="getWeather()">🔍 Search</button>
+
+      <!-- Weather info display -->
+      <div id="weatherDisplay"></div>
+
+      <!-- Chart canvas for visualizations -->
+      <canvas
+        id="weatherChart"
+        style="max-width: 100%; height: 300px; margin-top: 30px;"
+      ></canvas>
+
+      <div id="auth-section">
+        <h2>🔐 Login or Sign Up</h2>
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="signUp()">Sign Up</button>
+        <button onclick="logIn()">Log In</button>
+        <button onclick="logOut()">Log Out</button>
+        <p id="auth-status"></p>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
